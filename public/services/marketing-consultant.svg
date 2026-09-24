@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="presentation">
+
+  <defs>
+    <linearGradient id="bg-42" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf9f4"/>
+      <stop offset="1" stop-color="#ddd7c9"/>
+    </linearGradient>
+    <linearGradient id="dk-42" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2e2c29"/>
+      <stop offset="1" stop-color="#191817"/>
+    </linearGradient>
+    <filter id="grain-42" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" seed="42"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg-42)"/>
+  <rect x="150" y="110" width="420" height="220" rx="26" fill="#f7f4ee" stroke="#191817" stroke-width="5"/>
+  <polygon points="250,330 250,380 310,330" fill="#f7f4ee" stroke="#191817" stroke-width="5"/>
+  <rect x="195" y="165" width="280" height="11" fill="#9b958b"/>
+  <rect x="195" y="199" width="280" height="11" fill="#9b958b"/>
+  <rect x="195" y="233" width="180" height="11" fill="#9b958b"/>
+  <rect x="630" y="190" width="420" height="220" rx="26" fill="#191817"/>
+  <polygon points="900,410 900,460 840,410" fill="#191817"/>
+  <rect x="675" y="245" width="280" height="11" fill="#9b958b"/>
+  <rect x="675" y="279" width="280" height="11" fill="#9b958b"/>
+  <rect x="675" y="313" width="180" height="11" fill="#9b958b"/>
+  <circle cx="600" cy="120" r="30" fill="#c93a1e"/>
+  <rect width="1200" height="520" filter="url(#grain-42)" opacity="0.05"/>
+</svg>

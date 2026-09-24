@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+/*
+  STUDIO NALLAN — premium studio theme
+  Bone paper + warm near-black chapters, one ember accent.
+  Editorial pairing: Archivo (grotesque) + Instrument Serif (display italic).
+*/
+
+:root {
+  --paper: #f2efe8;
+  --paper-2: #e8e3d7;
+  --ink: #131210;
+  --ink-deep: #0d0c0a;
+  --ink-2: #3c3833;
+  --muted: #6f6a61;
+  --rule: #d3cec1;
+  --rule-strong: #b3ac9c;
+
+  --cream: #f2efe8;
+  --cream-dim: rgba(242, 239, 232, 0.62);
+  --cream-faint: rgba(242, 239, 232, 0.38);
+  --line-dark: rgba(242, 239, 232, 0.16);
+  --line-dark-strong: rgba(242, 239, 232, 0.32);
+
+  --accent: #c93a1e;
+  --accent-bright: #f0562b;
+  --accent-deep: #9c2a13;
+
+  --font-display: var(--font-archivo);
+  --font-editorial: var(--font-instrument-serif);
+  --font-mono: var(--font-geist-mono);
+
+  --gutter: clamp(1.25rem, 4.5vw, 3.5rem);
+  --maxw: 1440px;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+  --color-cream-faint: var(--cream-faint);
+  --color-line-dark: var(--line-dark);
+  --color-line-dark-strong: var(--line-dark-strong);
+  --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-deep: var(--accent-deep);
+
+  --font-sans: var(--font-display);
+  --font-display: var(--font-display);
+  --font-editorial: var(--font-editorial);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--ink-deep);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-feature-settings: "kern" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--ink-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: #3a352e;
+  border: 2px solid var(--ink-deep);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ---------- type ---------- */
+
+.t-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Primary nav links — a step up from eyebrow for readability */
+.t-nav {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Giant editorial display — serif roman/italic mix lives in markup */
+.t-display {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(3.25rem, 11vw, 10.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+}
+
+/* Giant grotesque display */
+.t-display-sans {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.9rem, 9.2vw, 8.75rem);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+/* Statement display — for scroll-scrubbed headlines that shouldn't shout */
+.t-display-sm {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(2rem, 5.2vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+}
+
+.t-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.2vw, 3.4rem);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.t-h3 {
+  font-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+  font-weight: 700;
+}
+
+.t-lede {
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  line-height: 1.55;
+  letter-spacing: -0.008em;
+}
+
+.t-body {
+  font-size: clamp(1.0625rem, 1.15vw, 1.1875rem);
+  line-height: 1.72;
+}
+
+.t-serif-i {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- layout ---------- */
+
+.shell {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.chapter-dark {
+  background: var(--ink-deep);
+  color: var(--cream);
+}
+
+.chapter-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.hair {
+  height: 1px;
+  width: 100%;
+  background: var(--rule);
+}
+
+.hair-dark {
+  height: 1px;
+  width: 100%;
+  background: var(--line-dark);
+}
+
+/* Ember glow for dark chapters */
+.glow {
+  background:
+    radial-gradient(52rem 30rem at 82% -6%, rgba(240, 86, 43, 0.14), transparent 62%),
+    radial-gradient(40rem 26rem at 8% 108%, rgba(240, 86, 43, 0.08), transparent 60%);
+}
+
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.link-plain {
+  position: relative;
+  display: inline-block;
+}
+
+.link-plain::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-plain:hover::after,
+.link-plain:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.mask-line {
+  display: block;
+  overflow: hidden;
+}
+
+/* Map linework keeps hairline-crisp strokes at every scale */
+.hmap :is(line, path, circle) {
+  vector-effect: non-scaling-stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

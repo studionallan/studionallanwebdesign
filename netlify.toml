@@ -1,0 +1,289 @@
+# Netlify — Studio Nallan Web Design
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Canonical host is https://www.studionallan.com.
+# In the Netlify UI: add BOTH studionallan.com and www.studionallan.com,
+# then set www as the Primary domain — Netlify 301s the apex automatically.
+
+
+# ---- Legacy URLs: previous site retired on relaunch (single-hop 301s) ----
+[[redirects]]
+  from = "/infrastructure"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/infrastructure/"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/strategist"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/strategist/"
+  to = "/about/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apply"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apply/"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/hamilton"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/hamilton/"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/hamilton"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/hamilton/"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/hamilton"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/hamilton/"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/hamilton"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/hamilton/"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/burlington"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/burlington/"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/burlington"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/burlington/"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/burlington"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/burlington/"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/burlington"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/burlington/"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/oakville"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/oakville/"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/oakville"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/oakville/"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/oakville"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/oakville/"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/oakville"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/oakville/"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/niagara-falls"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/niagara-falls/"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/niagara-falls"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/niagara-falls/"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/niagara-falls"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/niagara-falls/"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/niagara-falls"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/niagara-falls/"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/st-catharines"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/visual-brand-overhaul/st-catharines/"
+  to = "/services/website-redesign/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/st-catharines"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/google-business-profile-optimization/st-catharines/"
+  to = "/services/google-business-profile/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/st-catharines"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/conversion-web-systems/st-catharines/"
+  to = "/services/custom-website-design/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/st-catharines"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services/ai-lead-automation/st-catharines/"
+  to = "/services/ai-automation/"
+  status = 301
+  force = true

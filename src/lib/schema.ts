@@ -1,5 +1,5 @@
 import { site } from "./site";
-import { REVIEW } from "./review";
+import { REVIEW, REVIEW_LAYLA, REVIEW_MG } from "./review";
 
 /**
  * Structured data.
@@ -91,25 +91,23 @@ export function professionalServiceSchema() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "1",
+      reviewCount: "3",
     },
-    review: [
-      {
-        "@type": "Review",
-        author: {
-          "@type": "Person",
-          name: REVIEW.author,
-          image: `${site.domain}${REVIEW.image}`,
-        },
-        reviewRating: {
-          "@type": "Rating",
-          ratingValue: REVIEW.ratingValue,
-          bestRating: REVIEW.bestRating,
-        },
-        reviewBody: REVIEW.text,
-        itemReviewed: { "@id": ORG_ID },
+    review: [REVIEW, REVIEW_LAYLA, REVIEW_MG].map((r) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: r.author,
+        ...("image" in r && r.image ? { image: `${site.domain}${r.image}` } : {}),
       },
-    ],
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: r.ratingValue,
+        bestRating: r.bestRating,
+      },
+      reviewBody: r.text,
+      itemReviewed: { "@id": ORG_ID },
+    })),
   };
 }
 

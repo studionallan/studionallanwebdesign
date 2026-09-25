@@ -12,6 +12,12 @@ type Work = {
 
 const WORKS: Work[] = [
   {
+    src: "/portfolio/pmsc.jpg",
+    alt: "Website designed and built by Studio Nallan Web Design for PMSC",
+    caption: "PMSC",
+    ratio: "1600 / 885",
+  },
+  {
     src: "/portfolio/trust.jpg",
     alt: "Website designed and built by Studio Nallan Web Design for Trust",
     caption: "Trust",
@@ -30,10 +36,10 @@ const WORKS: Work[] = [
     ratio: "1600 / 893",
   },
   {
-    src: "/portfolio/etax.jpg",
-    alt: "Website designed and built by Studio Nallan Web Design for eTax",
-    caption: "eTax",
-    ratio: "1600 / 885",
+    src: "/portfolio/pest-control.jpg",
+    alt: "Website designed and built by Studio Nallan Web Design for Pest Control",
+    caption: "Pest Control",
+    ratio: "1600 / 886",
   },
   {
     src: "/portfolio/exact-detailing.jpg",
@@ -46,12 +52,6 @@ const WORKS: Work[] = [
     alt: "Website designed and built by Studio Nallan Web Design for Mark's Plumbing",
     caption: "Mark's Plumbing",
     ratio: "1600 / 888",
-  },
-  {
-    src: "/portfolio/pmsc.jpg",
-    alt: "Website designed and built by Studio Nallan Web Design for PMSC",
-    caption: "PMSC",
-    ratio: "1600 / 885",
   },
 ];
 

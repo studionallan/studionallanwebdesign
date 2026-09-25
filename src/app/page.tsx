@@ -3,7 +3,7 @@ import { Hero } from "@/components/sections/home/Hero";
 import { Problem } from "@/components/sections/home/Problem";
 import { Claim } from "@/components/sections/home/Claim";
 import { Proof } from "@/components/sections/shared/Proof";
-import { HomeReview } from "@/components/sections/shared/HomeReview";
+import { Testimonials } from "@/components/sections/shared/Testimonials";
 import { HowItsBuilt } from "@/components/sections/home/HowItsBuilt";
 import { LocalProof } from "@/components/sections/home/LocalProof";
 import { Faq } from "@/components/sections/shared/Faq";
@@ -33,7 +33,15 @@ export default function Home() {
       <Problem />
       <Claim />
       <Proof />
-      <HomeReview />
+      <Testimonials
+        dark
+        eyebrow="Reviews"
+        title={
+          <>
+            What clients <em className="t-serif-i">say.</em>
+          </>
+        }
+      />
       <HowItsBuilt />
       <LocalProof />
       <Faq />
